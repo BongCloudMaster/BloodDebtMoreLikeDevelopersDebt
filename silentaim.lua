@@ -12,7 +12,7 @@ local Workspace = game:GetService("Workspace")
 local LocalPlayer = Players.LocalPlayer
 -- eslint-disable-next-line @typescript-eslint/no-require-imports
 setthreadidentity(2)
-local FastCast = getrenv().require(game:GetService("ReplicatedStorage").gun_res.lib.projectileHandler.FastCastRedux)
+local FastCast = require(game:GetService("ReplicatedStorage").gun_res.lib.projectileHandler.FastCastRedux)
 setthreadidentity(8)
 local Camera = Workspace.CurrentCamera
 --[[
