@@ -560,7 +560,7 @@ do
 						warn("result found!")
 						local mouseLocation = UserInputService:GetMouseLocation()
 						local pos, _ = CameraController.worldToViewportPoint(result)
-						mousemoverel(pos.X - mouseLocation.X, pos.Y - mouseLocation.Y)
+						mousemoverel(pos.X - mouseLocation.X / 2, pos.Y - mouseLocation.Y / 2)
 					end
 				end
 			end
