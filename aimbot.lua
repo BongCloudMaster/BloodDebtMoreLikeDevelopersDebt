@@ -539,6 +539,7 @@ do
 				return nil
 			end
 			if input.UserInputType == Enum.UserInputType.MouseButton2 then
+				locked_target = nil
 				aimbot_state = true
 			end
 		end)
