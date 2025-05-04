@@ -481,6 +481,7 @@ do
 	-- If you are so hurt by me using different naming conventions
 	-- Do me a favor and hang yourself with a rope
 	-- I would appreciate it :)
+	local locked_target
 	local ray_params
 	local aimbot_state = false
 	local getTarget = function()
@@ -550,10 +551,10 @@ do
 			end
 		end)
 		RunService.RenderStepped:Connect(function()
-			local target = getTarget()
-			if target then
+			locked_target = getTarget()
+			if locked_target ~= nil then
 				if aimbot_state then
-					local result = target:getHead().Position
+					local result = locked_target:getHead().Position
 					if result then
 						warn("result found!")
 						local mouseLocation = UserInputService:GetMouseLocation()
